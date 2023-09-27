@@ -1,9 +1,33 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  country: one
-  name: MyString
-
-two:
-  country: two
-  name: MyString
+# == Schema Information
+#
+# Table name: states
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  country_id :bigint           not null
+#
+# Indexes
+#
+#  index_states_on_country_id  (country_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (country_id => countries.id)
+#
+united_kingdom:
+  name: United Kingdom
+  country: united_kingdom
+england:
+  name: England
+  country: united_kingdom
+wales:
+  name: Wales
+  country: united_kingdom
+scotland:
+  name: Scotland
+  country: united_kingdom
+northern_ireland:
+  name: Northern Ireland
+  country: united_kingdom
